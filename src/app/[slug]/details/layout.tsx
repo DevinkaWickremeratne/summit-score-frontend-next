@@ -18,6 +18,7 @@ const Layout = ({ children }: LayoutProps) => {
         </Navbar.Brand>
         <NavbarToggle />
         <Navbar.Collapse>
+        <Navbar.Link href="/" className='mt-2'>Conferences</Navbar.Link>
             <Button className="mr-2">Write a Review</Button>
           <Navbar.Link href="#" className='mt-2'>Login/Signup</Navbar.Link>
         </Navbar.Collapse>
