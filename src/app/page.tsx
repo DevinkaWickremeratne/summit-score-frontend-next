@@ -1,11 +1,13 @@
 "use client";
 import { Badge, Card, Navbar, NavbarToggle, TextInput } from 'flowbite-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import conferences from '@/data/ConferenceList';
 import formatDate from '@/utils/DateFormatter';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 
 export default function Home() {
+  const router = useRouter();
 
   return (
     <div className="bg-slate-50 dark:bg-slate-950 ">
@@ -36,16 +38,19 @@ export default function Home() {
         </div>
 
         <div className="flex flex-row flex-wrap justify-around gap-x-4 gap-y-8 w-full">
-          {conferences.map((conference, index) => (<Card href="#" className="w-64 min-h-48" key={conference.id}><h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            {conference.name}
-          </h5>
-            <Badge color="indigo" className="mt-2" size="sm">{formatDate(conference.startDate)} - {formatDate(conference.endDate)}</Badge>
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-              {conference.description}</p></Card>))}
-
+          {conferences.map((conference, index) => (
+            <Card href="#" className="w-64 min-h-48" key={conference.id} onClick={() => router.push(`${conference.id}/details`)}>
+              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                {conference.name}
+              </h5>
+              <Badge color="indigo" className="mt-2" size="sm">{formatDate(conference.startDate)} - {formatDate(conference.endDate)}</Badge>
+              <p className="font-normal text-gray-700 dark:text-gray-400">
+                {conference.description}
+              </p>
+            </Card>
+          ))}
         </div>
       </div>
-
     </div>
   );
 }
