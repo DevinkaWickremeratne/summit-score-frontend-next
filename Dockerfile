@@ -1,0 +1,18 @@
+FROM node:14-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+ARG NEXT_PUBLIC_REVIEW_MANAGEMENT_BASE_URL
+ENV NEXT_PUBLIC_REVIEW_MANAGEMENT_BASE_URL=$NEXT_PUBLIC_REVIEW_MANAGEMENT_BASE_URL
+
+RUN npm run build
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
