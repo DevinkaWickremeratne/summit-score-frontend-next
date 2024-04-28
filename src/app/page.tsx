@@ -2,18 +2,25 @@
 import { Badge, Card, Navbar, NavbarToggle, TextInput } from 'flowbite-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import conferences from '@/data/ConferenceList';
+import { useEffect, useState } from 'react';
 import formatDate from '@/utils/DateFormatter';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+// import conferences from '@/data/ConferenceList';
+import { fetchAllConferences } from './services/ConferenceService';
 
 export default function Home() {
   const router = useRouter();
+  const  [conferences,setConferences] = useState<any[]>([]);
+
+  useEffect( () => {
+   fetchAllConferences().then((response) => { setConferences(response)});
+  }, []);
 
   return (
     <div className="bg-slate-50 dark:bg-slate-950 ">
       <Navbar fluid rounded className="">
         <Navbar.Brand as={Link} href="#">
-          {/* <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Summit Score Logo" /> */}
+          {/* <img src="/logo.png" className="h-20" alt="Summit Score Logo" /> */}
           <span className="text-xl font-semibold dark:text-white">Summit Score</span>
         </Navbar.Brand>
         <NavbarToggle />
