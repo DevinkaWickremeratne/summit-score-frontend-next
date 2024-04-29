@@ -2,19 +2,13 @@
 import { Badge, Card, Navbar, NavbarToggle, TextInput } from 'flowbite-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import conferences from '@/data/ConferenceList';
 import formatDate from '@/utils/DateFormatter';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-// import conferences from '@/data/ConferenceList';
-import { fetchAllConferences } from './services/ConferenceService';
+
 
 export default function Home() {
   const router = useRouter();
-  const  [conferences,setConferences] = useState<any[]>([]);
-
-  useEffect( () => {
-   fetchAllConferences().then((response) => { setConferences(response)});
-  }, []);
 
   return (
     <div className="bg-slate-50 dark:bg-slate-950 ">

@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
           
       <Navbar fluid rounded>
         <Navbar.Brand as={Link} href="#">
-          {/* <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Summit Score Logo" /> */}
+          {/* <img src="/logo.png" className="mr-3 h-6 sm:h-9" alt="Summit Score Logo" /> */}
           <span className="text-xl font-semibold dark:text-white">Summit Score</span>
         </Navbar.Brand>
         <NavbarToggle />
