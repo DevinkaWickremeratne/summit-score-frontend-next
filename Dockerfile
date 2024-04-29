@@ -1,23 +1,26 @@
-FROM node:18-alpine
+FROM node:18
 
 WORKDIR /app
 
-COPY package*.json ./
-
-RUN npm install
+COPY package.json package-lock.json* ./
+RUN npm cache clean --force && \
+    npm install -g npm@latest && \
+    npm install
 
 COPY . .
 
-ARG NEXT_PUBLIC_REVIEW_MANAGEMENT_BASE_URL
-ENV NEXT_PUBLIC_REVIEW_MANAGEMENT_BASE_URL=$NEXT_PUBLIC_REVIEW_MANAGEMENT_BASE_URL
+ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN npm run build
 
-RUN addgroup -g 10018 choreo && \
-    adduser  --disabled-password  --no-create-home --uid 10018 --ingroup choreo choreouser
+ENV NODE_ENV production
 
-USER 10018
+ENV NEXT_TELEMETRY_DISABLED 1
 
+USER 10014
 EXPOSE 3000
 
-CMD ["npm", "start"]
+ENV HOSTNAME 0.0.0.0
+ENV PORT 3000
+
+CMD ["./node_modules/.bin/next", "start"]
