@@ -10,10 +10,11 @@ Clone the repository and install dependencies:
 git clone https://github.com/DevinkaWickremeratne/summit-score-frontend-next.git
 cd summit-score-frontend-next
 npm install
+```
 
-## Getting Started
+## Running the application
 
-First, run the development server:
+To run the application:
 
 ```bash
 npm run dev
