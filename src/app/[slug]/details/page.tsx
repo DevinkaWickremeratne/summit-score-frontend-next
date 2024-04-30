@@ -5,9 +5,9 @@ import { NextPage } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { useParams } from 'next/navigation';
 import React from 'react';
-import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import conferences from '@/data/ConferenceList';
 import formatDate from '@/utils/DateFormatter';
+import { authOptions } from '../../api/auth/[...nextauth]/auth';
 
 const DetailsPage: NextPage = async () => {
     const session = await getServerSession(authOptions)
