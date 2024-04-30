@@ -1,6 +1,6 @@
 # Summit Score
 
-This is a Next.js application that displays the details of a conference, including reviews left by attendees.
+This is a Next.js application that displays reviews left by conference attendees.
 
 ## Installation
 

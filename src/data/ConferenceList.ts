@@ -1,14 +1,15 @@
+// Generated test data for conferences
 const conferences = [
   {
-    id: 1,
-    name: "TechTrend Summit",
-    description: "Join us for the latest trends in technology innovation and digital transformation.",
-    startDate: "2024-05-15",
-    endDate: "2024-05-17",
-    location: "San Francisco, CA",
-    speakers: ["John Doe", "Jane Smith"],
-    website: "https://techtrendsummit.com",
-    rating: 4.5, // Example rating
+    "id": 1,
+        "name": "TechTrend Summit 2k21",
+        "description": "Join us to find out the latest trends in technology innovation and be digitally transformed",
+        "startDate": "2021-05-15",
+        "endDate": "2021-05-17",
+        "location": "San Francisco, CA",
+        "speakers": ["John Doe", "Jane Smith"],
+        "website": "https://techtrendsummit.com",
+    rating: 4.5,
     reviews: [
       { id: 1, user: "Alice", rating: 4, comment: "Great event with insightful talks!" },
       { id: 2, user: "Bob", rating: 5, comment: "Best conference I've ever attended!" }
@@ -23,7 +24,7 @@ const conferences = [
     location: "New York, NY",
     speakers: ["Emily Johnson", "Mark Davis"],
     website: "https://futureforwardconference.com",
-    rating: 4.2, // Example rating
+    rating: 4.2,
     reviews: [
       { id: 3, user: "Charlie", rating: 4, comment: "Interesting topics discussed!" },
       { id: 4, user: "David", rating: 3.5, comment: "Could have had more interactive sessions." }
@@ -38,7 +39,7 @@ const conferences = [
     location: "London, UK",
     speakers: ["Michael Johnson", "Sarah Lee"],
     website: "https://globalleadersforum.com",
-    rating: 4.8, // Example rating
+    rating: 4.8,
     reviews: [
       { id: 5, user: "Emma", rating: 5, comment: "Incredible experience, highly recommended!" },
       { id: 6, user: "Frank", rating: 4.5, comment: "A must-attend event for industry professionals." }
@@ -53,7 +54,7 @@ const conferences = [
     location: "Tokyo, Japan",
     speakers: ["Yuki Yamamoto", "Takeshi Tanaka"],
     website: "https://datadrivensummit.com",
-    rating: 4.3, // Example rating
+    rating: 4.3,
     reviews: [
       { id: 7, user: "Grace", rating: 4, comment: "Informative sessions, learned a lot!" },
       { id: 8, user: "Henry", rating: 4.2, comment: "Good networking opportunities." }
@@ -68,7 +69,7 @@ const conferences = [
     location: "Berlin, Germany",
     speakers: ["Lena Müller", "Max Fischer"],
     website: "https://innovatexexpo.com",
-    rating: 4.6, // Example rating
+    rating: 4.6,
     reviews: [
       { id: 9, user: "Isabella", rating: 4.5, comment: "Impressive showcase of cutting-edge technologies!" },
       { id: 10, user: "Jack", rating: 5, comment: "Excellent event, exceeded expectations!" }
@@ -83,7 +84,7 @@ const conferences = [
     location: "Paris, France",
     speakers: ["Sophie Martin", "Lucas Dupont"],
     website: "https://healthtechconference.com",
-    rating: 4.4, // Example rating
+    rating: 4.4,
     reviews: [
       { id: 11, user: "Olivia", rating: 4.2, comment: "Insightful discussions on health technology trends." },
       { id: 12, user: "Peter", rating: 4.5, comment: "Well-organized event with valuable insights." }
@@ -98,7 +99,7 @@ const conferences = [
     location: "Sydney, Australia",
     speakers: ["Emma Wilson", "James Roberts"],
     website: "https://greentechsummit.com",
-    rating: 4.7, // Example rating
+    rating: 4.7,
     reviews: [
       { id: 13, user: "Quinn", rating: 4.8, comment: "Inspiring talks on sustainability and innovation!" },
       { id: 14, user: "Rachel", rating: 4.5, comment: "Great event for eco-conscious individuals." }
@@ -113,7 +114,7 @@ const conferences = [
     location: "Singapore",
     speakers: ["Michael Johnson", "Sarah Lee"],
     website: "https://financeforum.com",
-    rating: 4.1, // Example rating
+    rating: 4.1,
     reviews: [
       { id: 13, user: "Rachel", rating: 4.3, comment: "Informative sessions on finance industry updates." },
       { id: 14, user: "Sam", rating: 4.5, comment: "Excellent networking opportunities with industry experts." }
@@ -128,7 +129,7 @@ const conferences = [
     location: "Beijing, China",
     speakers: ["Wei Li", "Chen Zhang"],
     website: "https://aisummit.com",
-    rating: 4.7, // Example rating
+    rating: 4.7,
     reviews: [
       { id: 15, user: "Tian", rating: 4.8, comment: "Incredible insights into AI technologies!" },
       { id: 16, user: "Wang", rating: 4.6, comment: "Must-attend event for AI enthusiasts." }
@@ -143,12 +144,12 @@ const conferences = [
     location: "Houston, TX",
     speakers: ["Emily Johnson", "John Smith"],
     website: "https://spacetechconference.com",
-    rating: 4.9, // Example rating
+    rating: 4.9,
     reviews: [
       { id: 17, user: "Alex", rating: 5, comment: "Mind-blowing presentations on space technology!" },
       { id: 18, user: "Eva", rating: 4.8, comment: "Fascinating discussions on future space missions." }
     ]
   }
-  ];
+];
 
-  export default conferences;
+export default conferences;
