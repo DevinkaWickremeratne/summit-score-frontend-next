@@ -17,7 +17,6 @@ export type ConferenceResponse = {
 export const fetchAllConferences = async (
 ): Promise<ConferenceResponse[]> => {
     try {
-        console.log('API', BASE_URL)
         const response: AxiosResponse<ConferenceResponse[]> = await axios.get(
             `${BASE_URL}/conferences`
         );
